@@ -94,9 +94,22 @@
 ---
 
 ## Screenshots
+**Home Page**
 <img alt="Home page" src="https://github.com/user-attachments/assets/07932f3f-96c9-4797-bd19-6d38447bf578"/>
+**Registration Page**
+<img alt="Registration Page" src="https://github.com/user-attachments/assets/2f4fa39e-7a92-452b-bb2b-c27b68001e14"/>
+**Login Page**
 <img alt="Login Page" src="https://github.com/user-attachments/assets/5be342eb-a180-463a-9940-57d59c4a3aff"/>
-<img alt="After login page" src="https://github.com/user-attachments/assets/d2536208-3e5c-4611-8be4-b99b8debb461"/>
+**Trainer login Page**
+<img alt="Trainer login page" src="https://github.com/user-attachments/assets/d2536208-3e5c-4611-8be4-b99b8debb461"/>
+**Student Login Page**
+<img alt="Student login page" src="https://github.com/user-attachments/assets/f39d96e8-6057-4c44-b28e-94b4132f592c"/>
+**Course Purchase Page**
+<img alt="Student login page" src="https://github.com/user-attachments/assets/8d9864fa-55e7-4ae6-b096-c20fa00d5361"/>
+**Course Info Page**
+<img alt="Course Info page" src="https://github.com/user-attachments/assets/dc22040b-fff7-4ebd-bea8-e7c877bb01ff"/>
+
+
 
 ---
 ## License
