@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: #343a40;
+            border: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        form {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+
+    <title>Add Lesson</title>
+
+    <script>
+	  function handleFormSubmission(event) {
+	    const form = event.target;
+	    event.preventDefault(); // Prevent the form from submitting normally
+	    alert("Course added successfully!");
+	    form.submit(); // Submit the form manually
+	  }
+	</script>
+    
+  </head>
+  <body>
+    <h1>Add a new lesson!</h1>
+    
+    <form action="/lesson" method="post" onsubmit="handleFormSubmission(event)">
+      <div class="mb-3">
+	    <label for="courseId" class="form-label">Course ID</label>
+	    <input type="text" class="form-control" name="courseId">
+	  </div>
+	  
+	  <div class="mb-3">
+	    <label for="lessonId" class="form-label">Lesson ID</label>
+	    <input type="text" class="form-control" name="lessonId">
+	  </div>
+	  
+	  <div class="mb-3">
+	    <label for="lessonName" class="form-label">Lesson Name</label>
+	    <input type="text" class="form-control" name="lessonName">
+	  </div>
+	  
+	  <div class="mb-3">
+	    <label for="lessonTopics" class="form-label">Lesson Topics</label>
+	    <input type="text" class="form-control" name="topics">
+	  </div>
+	  
+	  <div class="mb-3">
+	    <label for="link" class="form-label">Lesson Video Link</label>
+	    <input type="text" class="form-control" name="link">
+	  </div>
+	  
+	  
+	  <button type="submit" class="btn btn-primary">Add Lesson</button>
+	</form>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
