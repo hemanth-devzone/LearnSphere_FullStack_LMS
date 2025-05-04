@@ -2,22 +2,22 @@
 
 ## Project Overview
 
-**Learn-Sphere** is a full-stack e-learning platform developed using Java, HTML, and CSS. This platform aims to provide an interactive and user-friendly experience for both learners and instructors. The project leverages Java for the backend development and HTML, CSS for the frontend. It offers various educational features such as user registration, course listings, and progress tracking.
+**Learn-Sphere** is a full-stack e-learning platform developed using Spring Boot and modern web technologies. This platform provides an interactive and user-friendly experience for both students and trainers. The project leverages Spring Boot for backend development and Thymeleaf with Bootstrap for the frontend. It offers various educational features such as user registration, course management, and secure payment integration.
 
 ### Key Features
 
 - **User Authentication:**  
   Users can create accounts, log in, and maintain their profiles.  
-  _Roles:_ Students and Instructors.
+  _Roles:_ Students and Trainers.
   
 - **Course Management:**  
-  Instructors can upload and manage their courses, while students can browse and enroll in available courses.
+  Trainers can create and manage courses with multiple lessons, while students can browse and purchase available courses.
 
-- **Progress Tracking:**  
-  Students can track their learning progress and see how much content they've completed.
+- **Lesson Management:**  
+  Trainers can add detailed lessons to courses with topics and learning materials.
 
-- **Admin Panel:**  
-  Admins have full control to manage users and courses, ensuring proper maintenance of the platform.
+- **Payment Integration:**  
+  Secure payment processing using Razorpay for course purchases.
 
 - **Responsive Interface:**  
   The platform features a simple, responsive, and intuitive design for both web and mobile devices.
@@ -28,11 +28,14 @@
 
 - **Frontend:**  
   <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/> 
+  <img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img alt="Bootstrap" src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+  <img alt="Thymeleaf" src="https://img.shields.io/badge/Thymeleaf-%23005C0F.svg?style=for-the-badge&logo=Thymeleaf&logoColor=white"/>
 
 - **Backend:**  
   <img alt="Java" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white"/>
-  <img alt="Spring" src ="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
+  <img alt="Spring Boot" src="https://img.shields.io/badge/Spring%20Boot-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
+  <img alt="Spring Data JPA" src="https://img.shields.io/badge/Spring%20Data%20JPA-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white"/>
 
 - **Database:**  
   <img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"/>
@@ -40,20 +43,27 @@
 
 ## Project Structure
 
-### 1. **Frontend (HTML & CSS)**
+### 1. **Backend Components**
 
-  The frontend is built using simple HTML and CSS files to create the structure and styling for the platform. The interface is designed to be minimalistic and easy to navigate.
+- **Controllers:**  
+  Handle HTTP requests and manage application flow using Spring MVC.
 
-### 2. **Backend (Java)**
+- **Services:**  
+  Implement business logic and transaction management.
 
-- **Servlets & JSP:**  
-    Java Servlets handle HTTP requests, while JSP (JavaServer Pages) render dynamic content, allowing user interactions to be processed and displayed on the web pages.
+- **Repositories:**  
+  Manage data persistence using Spring Data JPA.
 
-- **JDBC:**  
-    Java Database Connectivity (JDBC) is used to interact with the MySQL database, allowing CRUD (Create, Read, Update, Delete) operations for users, courses, and progress tracking.
+- **Entities:**  
+  JPA entities for Users, Courses, and Lessons.
 
-- **Controller:**  
-    The backend uses the Model-View-Controller (MVC) architecture for separating the logic and ensuring scalability.
+### 2. **Frontend Components**
+
+  - **Thymeleaf Templates:**  
+  Dynamic HTML templates with Bootstrap styling.
+
+  - **Static Resources:**  
+  CSS, JavaScript, and other static assets.
 
 ---
 
@@ -62,8 +72,8 @@
 ### Prerequisites
 
 - JDK 1.8 or later
-- Apache Tomcat or any Java-based server
 - MySQL Database
+- Maven
 - IDE (IntelliJ IDEA, Eclipse, etc.)
 
 ### Steps to Run the Project
@@ -78,19 +88,23 @@
 
 3. **Database Configuration:**
 
-    Set up a MySQL database and import the required schema (you can find SQL files in the repository for setting up the database).
-
-    Update the database.properties file with your database credentials.
+    - Create MySQL database named 'ls3'
+    - Update `application.properties` with your MySQL credentials:
+      ```properties
+      spring.datasource.url=jdbc:mysql://localhost/ls3
+      spring.datasource.username=your_username
+      spring.datasource.password=your_password
 
 4. **Run the Server:**
 
-    Start your Apache Tomcat or Java-based server.
-
-    Run the project as a Web Application.
+    ```bash
+    cd com.learnSphere
+    .\mvnw.cmd clean install
+    .\mvnw.cmd spring-boot:run
 
 5. **Access the Application:**
 
-    Open a browser and go to http://localhost:8080/Learn-Sphere to start using the platform.
+    Open a browser and go to http://localhost:9996/Learn-Sphere to start using the platform.
 ---
 
 ## Screenshots
@@ -118,6 +132,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 ## Acknowledgements
-Thanks to all contributors for helping in the development of this platform.
+- Thanks to all contributors for helping in the development of this platform.
 
-Special thanks to the open-source community for providing tools and libraries used in this project.
+- Special thanks to the Spring Boot and Thymeleaf communities for their excellent documentation and tools.
+- Thanks to Razorpay for providing payment integration capabilities.
