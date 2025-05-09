@@ -81,7 +81,7 @@
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/hemanthreddy100/Learn-Sphere.git
+   git clone https://github.com/hemanth-devzone/LearnSphere_FullStack_LMS.git
 2. **Import into IDE:**
 
     Open the project in your preferred Java IDE (e.g., IntelliJ IDEA, Eclipse).
@@ -132,7 +132,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 ## Acknowledgements
-- Thanks to all contributors for helping in the development of this platform.
 
-- Special thanks to the Spring Boot and Thymeleaf communities for their excellent documentation and tools.
-- Thanks to Razorpay for providing payment integration capabilities.
+- Developed during internship at KodNest.
+- Thanks to Spring Boot and Thymeleaf communities.
+- Razorpay for providing secure payment integration.
+- All contributors and mentors involved in the project journey.
